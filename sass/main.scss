@@ -1,0 +1,54 @@
+// 1. Importa as variáveis primeiro, para que possam ser usadas em outros arquivos
+@import 'variables';
+
+// 2. Estilos Globais (Reset)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+body {
+    background-color: $secondary-color;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// 3. Importa os estilos dos componentes
+@import 'header';
+@import 'products';
+
+// 4. Estilos de Seção e Media Queries
+section {
+    padding: 56px 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+}
