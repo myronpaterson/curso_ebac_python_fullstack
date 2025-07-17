@@ -1,0 +1,24 @@
+// Arquivo: src/styles/main.less
+
+// Variáveis do LESS para reutilizar cores e tamanhos
+@cor-de-fundo: #f2f2f2;
+@cor-do-texto: #4a4a4a;
+@cor-destaque: #e84393;
+@tamanho-da-fonte: 18px;
+
+body {
+    background-color: @cor-de-fundo;
+    color: @cor-do-texto;
+    font-family: Arial, sans-serif;
+    font-size: @tamanho-da-fonte;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: @cor-destaque;
+    font-size: @tamanho-da-fonte * 2; // Usando cálculo do LESS
+    border-bottom: 2px solid @cor-destaque;
+    display: inline-block;
+    padding-bottom: 10px;
+}
